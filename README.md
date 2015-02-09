@@ -15,6 +15,16 @@ list of tags!
 
 Created by [XOXCO](http://xoxco.com)
 
+Modified by [Orchidsoft](http://orchidsoft.com)
+
+## Preparation
+Install [NodeJS](http://nodejs.org)
+
+Then run `$ npm install`
+
+## Build
+
+Run `gulp` to build and minify all scripts.
 
 ## Instructions
 
