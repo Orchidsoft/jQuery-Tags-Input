@@ -1,0 +1,28 @@
+{
+  "name": "jQuery-Tags-Input",
+  "version": "0.0.0",
+  "description": "Do you use tags to organize content on your site? \r This plugin will turn your boring tag list into a \r magical input that turns each tag into a style-able \r object with its own delete link. The plugin handles \r all the data - your form just sees a comma-delimited \r list of tags!",
+  "main": "jquery.tagsinput.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Orchidsoft/jQuery-Tags-Input.git"
+  },
+  "author": "Steve Hobbs <elkdanger@gmail.com> (http://stevescodingblog.co.uk/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Orchidsoft/jQuery-Tags-Input/issues"
+  },
+  "homepage": "https://github.com/Orchidsoft/jQuery-Tags-Input",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-jshint": "^1.9.2",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglify": "^1.1.0"
+  }
+}
