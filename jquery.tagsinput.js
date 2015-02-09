@@ -90,7 +90,8 @@
         input.data('minwidth', minWidth);
         input.data('maxwidth', maxWidth);
         input.data('tester_id', testerId);
-        input.css('width', minWidth);
+        //input.css('width', minWidth);
+        input.doAutosize(options);
     };
 
     $.fn.addTag = function (value, options) {
@@ -397,11 +398,12 @@
                         $(event.data.fake_input).val(event.data.defaultText);
                         $(event.data.fake_input).css('color', event.data.placeholderColor);
                         $(event.data.fake_input).removeClass('not_valid');
+                        $(event.data.fake_input).resetAutosize(settings);
                     }
                     return false;
                 });
 
-		// if user pastes a string in remove the delmiters they have pasted otherwise it will break on backspace
+                // if user pastes a string in remove the delmiters they have pasted otherwise it will break on backspace
                 $(data.fake_input).on('paste', data, function (event) {
                     setTimeout(function() {
                         var input = $(event.data.fake_input);
@@ -414,13 +416,13 @@
                     }, 0);
                 });
 
-                // if user types a comma, create a new tag
+                // if user types a comma or presses enter, create a new tag
                 $(data.fake_input).on('keypress', data, function (event) {
                     if (event.which == event.data.delimiter.charCodeAt(0) || event.which == 13) {
                         event.preventDefault();
                         if (event.data.onlyautocomplete == false && (event.data.minChars <= $(event.data.fake_input).val().length)) {
                             if ($.fn.tagsInput.validateMaxChars(settings, event)) {
-                            	$(".ui-autocomplete").hide();
+                                $(".ui-autocomplete").hide();
                                 $(event.data.fake_input).trigger('autocompleteclose', [data]);
                                 $(event.data.real_input).addTag($(event.data.fake_input).val(), { focus: true, unique: (settings.unique) });
                                 $(event.data.fake_input).resetAutosize(settings);
@@ -482,7 +484,7 @@
             f.call(obj, obj, tags[i]);
         }
     };
-    
+
     $.fn.tagsInput.validateMaxChars = function (settings, event) {
         var isValid = !event.data.maxChars || (event.data.maxChars >= $(event.data.fake_input).val().length);
 
