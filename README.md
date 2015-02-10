@@ -20,6 +20,8 @@ Modified by [Orchidsoft](http://orchidsoft.com)
 ## Preparation
 Install [NodeJS](http://nodejs.org)
 
+Install gulp globally: `$ npm install -g gulp`
+
 Then run `$ npm install`
 
 ## Build
