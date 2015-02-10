@@ -13,6 +13,8 @@ list of tags!
 
 [Test it yourself using this jsFiddle Demo](http://jsfiddle.net/7aDak/)
 
+[Contribute](#contributing)
+
 Created by [XOXCO](http://xoxco.com)
 
 Modified by [Orchidsoft](http://orchidsoft.com)
