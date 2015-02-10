@@ -113,7 +113,7 @@ return a jQuery object from this function which represents the element you would
 #Contributing
 
 ## Prerequisites:
-Install [NodeJS]t(http://nodejs.org)
+Install [NodeJS](http://nodejs.org)
 
 Install gulp globally: `$ npm install -g gulp`
 
