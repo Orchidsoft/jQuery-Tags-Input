@@ -17,17 +17,6 @@ Created by [XOXCO](http://xoxco.com)
 
 Modified by [Orchidsoft](http://orchidsoft.com)
 
-## Preparation
-Install [NodeJS](http://nodejs.org)
-
-Install gulp globally: `$ npm install -g gulp`
-
-Then run `$ npm install`
-
-## Build
-
-Run `gulp` to build and minify all scripts.
-
 ## Instructions
 
 First, add the Javascript and CSS files to your <head> tag:
@@ -120,3 +109,18 @@ return a jQuery object from this function which represents the element you would
 	   'maxChars' : 0 //if not provided there is no limit,
 	   'placeholderColor' : '#666666'
 	});
+
+#Contributing
+
+## Prerequisites:
+Install [NodeJS]t(http://nodejs.org)
+
+Install gulp globally: `$ npm install -g gulp`
+
+## After cloning:
+
+Install packages: `$ npm install`
+
+## Build
+
+Run `gulp` to build and minify all scripts. This must be done before commiting code back to origin.
