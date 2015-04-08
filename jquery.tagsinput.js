@@ -98,6 +98,10 @@
         options = jQuery.extend({ focus: false, callback: true }, options);
         this.each(function () {
 
+			//if not all uppercase then lowercase the string
+            if (value !== value.toUpperCase())
+                value = value.toLowerCase();
+		
             var settings = $(this).data('settings');
             var tagslist = $(this).val().split(settings.delimiter);
             if (tagslist[0] == '') {
