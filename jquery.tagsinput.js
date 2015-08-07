@@ -281,7 +281,8 @@
             onRemoveTag: null,
             validateTag: null,
             onError: null,
-            onCreateTag: null     // callback for tag html creation
+            onCreateTag: null,     // callback for tag html creation
+			automatedId: "TagInput"
         }, options);
 
         this.each(function () {
@@ -302,7 +303,7 @@
 
             $(this).addClass('tagsinput_processed');
 
-            var markup = '<div id="' + id + '_tagsinput" class="tagsinput"><div id="' + id + '_addTag" class="tagsinput_inputwrapper">';
+            markup = markup + '<input type="text" data-automated-id="' + settings.automatedId + '" id="' + id + '_tag" value="" data-default="' + settings.defaultText + '" style="z-index:9000;" />';
 
             if (settings.interactive) {
                 markup = markup + '<input id="' + id + '_tag" value="" data-default="' + settings.defaultText + '" />';
