@@ -303,7 +303,7 @@
 
             $(this).addClass('tagsinput_processed');
 
-            markup = markup + '<input type="text" data-automated-id="' + settings.automatedId + '" id="' + id + '_tag" value="" data-default="' + settings.defaultText + '" style="z-index:9000;" />';
+            markup = markup + '<input type="text" data-automated-id="' + settings.automatedId + '" id="' + id + '_tag" value="" data-default="' + settings.defaultText + '" maxlength="35" />';
 
             if (settings.interactive) {
                 markup = markup + '<input id="' + id + '_tag" value="" data-default="' + settings.defaultText + '" />';
