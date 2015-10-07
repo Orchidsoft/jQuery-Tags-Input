@@ -23,14 +23,9 @@
 */
 
 /*
-    MODIFIED SEPTEMBER 2012
-    Steve Hobbs
-    Orchid Software
+    Forchid
 
     https://github.com/elkdanger/jQuery-Tags-Input
-
-    - Added callback handler for specifying custom tag html, in place of the default
-
 */
 
 (function ($) {
@@ -136,6 +131,12 @@
                 }
             }
 
+			value = value.replace(/<[^\s][^>]*>?/g, ' ').trim();
+            if (value == '') {
+                skipTag = true;
+                $(settings.fake_input).addClass('not_valid');
+            }
+			
             if (value != '' && skipTag != true) {
 
                 // Defer to our 'onCreateTag' event handler if a callback is available
